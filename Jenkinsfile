@@ -14,11 +14,7 @@ pipeline{
        sh 'mvn clean package'
        }
        }
-   stage('Archive'){
-     steps{
-       archetypeArtifacts artifacts: 'target/*.war',fingerprint:true
-       }
-       }
+   s
    stage('deploy'){
      steps{
        sh 'mvn clean package'
